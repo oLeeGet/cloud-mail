@@ -59,6 +59,10 @@ watch(() => [uiStore.dark, settingStore.lang], () => {
 });
 
 const language = computed(() => {
+  if (locale.value === 'tw') {
+    return 'zh_TW'
+  }
+
   if (locale.value === 'zh') {
     return 'zh_CN'
   }
